@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "khanjk_diffusion2d"
+authors = [
+    {name = "Jannik Khan", email = "jannikkhan@gmail.com"},
+]
+description = "This package is a result of the third Simulation-Software exercise"
+readme = "README.md"
+requires-python = ">=3"
+keywords = []
+license = "CC-BY-4.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "numpy",
+    "matplotlib"
+]
+dynamic = ["version"]
+
+[project.urls]
+Repository = "https://github.com/Simulation-Software-Engineering/diffusion2d"
+
+[tool.setuptools]
+packages = ["diffusion2d"]
