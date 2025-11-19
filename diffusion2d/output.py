@@ -1,12 +1,10 @@
-def create_plot(n_output, fig, fig_counter):
-    # Create figure
-    if n in n_output:
-        fig_counter += 1
-        ax = fig.add_subplot(220 + fig_counter)
-        im = ax.imshow(u.copy(), cmap=plt.get_cmap('hot'), vmin=T_cold, vmax=T_hot)  # image for color bar axes
-        ax.set_axis_off()
-        ax.set_title('{:.1f} ms'.format(n * dt * 1000))
-    
+import matplotlib.pyplot as plt
+
+def create_plot(fig, fig_counter, u, n, dt, T_cold, T_hot):
+    ax = fig.add_subplot(220 + fig_counter)
+    im = ax.imshow(u.copy(), cmap=plt.get_cmap('hot'), vmin=T_cold, vmax=T_hot)
+    ax.set_axis_off()
+    ax.set_title('{:.1f} ms'.format(n * dt * 1000))
     return im
 
 def output_plots(fig, im):

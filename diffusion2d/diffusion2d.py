@@ -65,7 +65,9 @@ def solve(dx=0.1, dy=0.1, D=4):
         u0, u = do_timestep(u0, u, D, dt, dx2, dy2)
 
         # Create figure
-        im = create_plot()
+        if n in n_output:
+            fig_counter += 1
+            im = create_plot(fig, fig_counter, u, n, dt, T_cold, T_hot)
 
     # Plot output figures
     output_plots(fig, im)
